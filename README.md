@@ -1,4 +1,4 @@
-# Light Sensing and Direction Detection System using Arduino Nano
+# Light Sensing and Direction Detection System (candela meter) using Arduino Nano
 
 This Arduino code is designed to create a light sensing and direction detection system using an Arduino Nano microcontroller. The system utilizes LDRs (Light Dependent Resistors) to measure light levels in various directions and displays the results on an I2C-connected LCD screen.
 
