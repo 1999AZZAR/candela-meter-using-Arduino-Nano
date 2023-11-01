@@ -94,4 +94,4 @@ graph LR
 
 ## Image
 
-![image](Screenshot_20231031_144611.png)
+![image](img/01.png)
