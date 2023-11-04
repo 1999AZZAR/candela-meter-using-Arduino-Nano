@@ -26,8 +26,8 @@ void setup() {
   Serial.begin(9600);
   lcd.init();
   lcd.backlight();
-  pinMode(button1Pin, INPUT);
-  pinMode(button2Pin, INPUT);
+  pinMode(button1Pin, INPUT_PULLUP);
+  pinMode(button2Pin, INPUT_PULLUP);
 }
 
 void loop() {
@@ -132,7 +132,7 @@ void loop() {
     if (formulaChoice > 3) {
       formulaChoice = 1;
     }
-    delay(100); // Debounce delay
+    delay(250); // Debounce delay
   }
 
   // Check if button 2 is pressed to switch menus
@@ -141,7 +141,7 @@ void loop() {
     if (menuActive > 2){
     	menuActive = 1;
     }
-    delay(100); // Debounce delay
+    delay(250); // Debounce delay
   }
 }
 
