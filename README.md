@@ -1,32 +1,47 @@
-# Light Sensing and Direction Detection System (candela meter) using Arduino Nano
+# Light Sensing and Direction Detection System (Candela Meter) using Arduino Nano
 
-This Arduino code is designed to create a light sensing and direction detection system using an Arduino Nano microcontroller. The system utilizes LDRs (Light Dependent Resistors) to measure light levels in various directions and displays the results on an I2C-connected LCD screen.
+## Table of content
 
-## Hardware Requirements
+1. [Introduction](#introduction)
+2. [Components](#components)
+3. [Libraries](#libraries)
+4. [Pin Configuration](#pin-configuration)
+5. [Functionality](#functionality)
+6. [Version](#version)
+7. [Usage](#usage)
+8. [Support](#support)
+
+## Introduction
+
+This project involves creating a light sensing and direction detection system using an Arduino Nano microcontroller. The system uses Light Dependent Resistors (LDRs) to measure light levels in different directions and displays the results on a 20x4 character I2C LCD screen.
+
+## Components
+
+To build this system, you'll need the following hardware components:
 
 - Arduino Nano
-- I2C LCD screen (20x4 characters)
-- Four LDRs (Light Dependent Resistors)
-- Two push buttons (for menu navigation)
-- Voltage and distance sensors (here i use 2 pot)(analog)
+- 20x4 I2C LCD screen
+- Four LDRs
+- Two push buttons for menu navigation
+- Voltage and distance sensors (here we use two potentiometers as analog sensors)
 - Appropriate power source for the Arduino Nano
 
-## Libraries Used
+## Libraries
 
-The code makes use of the following libraries:
+The code utilizes two libraries:
 
 - Wire.h: For I2C communication with the LCD screen.
 - LiquidCrystal_I2C.h: To interface with and control the I2C-connected LCD screen.
 
 ## Pin Configuration
 
-The Arduino Nano is connected to various components as follows:
+Here's how the Arduino Nano is connected to various components:
 
 - LDRs:
-  - LDR positioned at the top: Analog pin A0
-  - LDR positioned on the right: Analog pin A1
-  - LDR positioned at the bottom: Analog pin A2
-  - LDR positioned on the left: Analog pin A3
+  - Top LDR: Analog pin A0
+  - Right LDR: Analog pin A1
+  - Bottom LDR: Analog pin A2
+  - Left LDR: Analog pin A3
 - Voltage measurement: Analog pin A6
 - Distance measurement: Analog pin A7
 - Menu navigation buttons:
@@ -38,63 +53,29 @@ The Arduino Nano is connected to various components as follows:
 
 ## Functionality
 
-The code functions as follows:
+The system operates as follows:
 
 - It continuously reads values from the LDRs, voltage sensor, and distance sensor at regular intervals.
 - Normalizes and maps the sensor readings to calculate lux, voltage, and distance values.
-- Uses the obtained values to calculate the candela value for each of the four directions (Top, Right, Bottom, and Left).
+- Uses these values to calculate the candela value for each direction (Top, Right, Bottom, and Left).
 - Determines the dominant direction based on the highest candela value.
-- Displays the calculated candela values and dominant direction on the LCD screen.
-- Provides two menus:
-  - Home: Displays the average candela value and the dominant direction.
-  - Sensor Values: Displays individual candela values for each direction.
+- Displays the calculated candela values and the dominant direction on the LCD screen.
+- Provides two menus: Home (average candela and dominant direction) and Sensor Values (individual candela values).
 - Menu navigation is achieved using two push buttons.
+
+## Version
+
+- [code 1](code/code%201)
+- [code 2](code/code%202)
 
 ## Usage
 
-1. Upload this code to your Arduino Nano using the Arduino IDE or a compatible software.
-2. Connect the components as per the provided pin configuration.
+To use this system:
+
+1. Upload the provided code to your Arduino Nano using the Arduino IDE or compatible software.
+2. Connect the components according to the specified pin configuration.
 3. Power up the Arduino Nano.
-4. The system will display the calculated values on the LCD screen and allow you to switch between Home and Sensor Values menus using the push buttons.
-
-## Flowchart
-
-```mermaid
-graph LR
-    Start --> Setup
-    Setup --> Initialize
-    Initialize --> Home
-    Initialize --> SensorValues
-    SensorValues --> ReadSensors
-    ReadSensors --> NormalizeReadings
-    NormalizeReadings --> CalculateLux
-    NormalizeReadings --> CalculateVoltage
-    NormalizeReadings --> CalculateDistance
-    CalculateLux --> CalculateCandela
-    CalculateVoltage --> CalculateCandela
-    CalculateDistance --> CalculateCandela
-    CalculateCandela --> DetermineDominantDirection
-    DetermineDominantDirection --> DisplayData
-    Home --> DisplayHome
-    SensorValues --> DisplaySensorValues
-    DisplayData --> CheckButton1
-    DisplayData --> CheckButton2
-    CheckButton1 --> SwitchMenu
-    CheckButton2 --> SwitchMenu
-    SwitchMenu --> Home
-    SwitchMenu --> SensorValues
-    Home --> End
-    SensorValues --> End
-    End --> Stop
-```
-
-## Simulation
-
-[wokwi simmulation](https://wokwi.com/projects/379985688564603905)
-
-## Image
-
-![image](img/01.png)
+4. The system will display calculated values on the LCD screen, and you can switch between Home and Sensor Values menus using the push buttons.
 
 ## Support
 

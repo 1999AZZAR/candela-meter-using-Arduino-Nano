@@ -1,19 +1,20 @@
-# Light Sensing and Direction Detection System (candela meter)
+# Light Sensing and Direction Detection System (candela meter) using arduino nano
 
 This README provides a comprehensive overview of the code for a light sensing and direction detection system. The code is written for an Arduino microcontroller and utilizes LDRs (Light Dependent Resistors) to measure light levels in different directions and determine the dominant direction.
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Hardware Components](#hardware-components)
-3. [Software Components](#software-components)
-4. [Usage](#usage)
-5. [Formulas](#formulas)
-6. [Menu System](#menu-system)
-7. [Functions](#functions)
-8. [Flowchart](#flowchart)
-9. [Simulation](#simulation)
-10. [Troubleshooting](#troubleshooting)
+1. [Introduction](#1-introduction)
+2. [Hardware Components](#2-hardware-components)
+3. [Software Components](#3-software-components)
+4. [Usage](#4-usage)
+5. [Formulas](#5-formulas)
+6. [Menu System](#6-menu-system)
+7. [Functions](#7-functions)
+8. [Flowchart](#8-flowchart)
+9. [Simulation](#9-simulation-and-diagram)
+10. [Troubleshooting](#10-troubleshooting)
+11. [Support](#11-support)
 
 ## 1. Introduction
 
@@ -27,8 +28,7 @@ This code is designed to operate a light sensing and direction detection system 
 - 20x4 I2C LCD Display
 - Four LDRs (Light Dependent Resistors)
 - Two Push Buttons
-- Voltage Measurement Sensor
-- Distance Measurement Sensor
+- Voltage and distance sensors (here we use two potentiometers as analog sensors)
 
 ## 3. Software Components
 
@@ -106,10 +106,21 @@ R --> F
 
 [wokwi](https://wokwi.com/projects/379985688564603905)
 
-![diagram](img/01.png)
+![diagram](https://github.com/1999AZZAR/candela-meter-using-Arduino-Nano/blob/master/img/01.png)
 
 ## 10. Troubleshooting
 
 If you encounter any issues or need to modify the code, please refer to the comments within the code for more detailed explanations of each section. You can also adjust the pin assignments and parameters as needed for your specific hardware setup.
 
-**Note**: Ensure that you have the required libraries installed in your Arduino IDE, and that the I2C address of the LCD display matches the one in the code (0x27). Make sure to connect the hardware components as per your specific configuration.
+**Note**: Ensure that you have the required libraries installed in your Arduino IDE, Make sure to connect the hardware components as per your specific configuration.
+
+## 11. Support
+
+You can support me by buy me a coffee if u like to.
+
+<div align="left">
+<!--   <h4>And you can also support me by <a href="https://www.buymeacoffee.com/azzar" target="_blank">buying me coffee</a></h4> -->
+  <a href="https://www.buymeacoffee.com/azzar" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 42px !important;width: 151.9px !important; margin-top: 50px !important;">
+  </a>
+</div>
