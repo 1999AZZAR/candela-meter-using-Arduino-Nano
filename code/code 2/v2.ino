@@ -51,8 +51,8 @@ void loop() {
     float luxRightNormalized = map(luxRight, 8, 1023, 10000, 0); // Adjust the mapping based on LDR characteristics
     float luxBottomNormalized = map(luxBottom, 8, 1023, 10000, 0); // Adjust the mapping based on LDR characteristics
     float luxLeftNormalized = map(luxLeft, 8, 1023, 10000, 0); // Adjust the mapping based on LDR characteristics
-    float voltage = map(voltageValue, 0, 1023, 50, 140) / 10.0; // Adjust the mapping based on voltage measurement
-    float distance = map(distanceValue, 0, 1023, 1, 1000) / 100.0; // Adjust the mapping based on distance measurement
+    float voltage = map(voltageValue, 0, 1023, 500, 1400) / 100.00; // Adjust the mapping based on voltage measurement
+    float distance = map(distanceValue, 0, 1023, 1, 1000) / 100.00; // Adjust the mapping based on distance measurement
 
     if (formulaChoice == 1) {
       float area = (4 * PI * (distance * distance)) * voltage;
