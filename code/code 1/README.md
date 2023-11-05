@@ -109,7 +109,7 @@ graph LR
 
 ## Image
 
-![image](img/01.png)
+![image](https://github.com/1999AZZAR/candela-meter-using-Arduino-Nano/blob/master/img/01.png)
 
 ## Support
 
